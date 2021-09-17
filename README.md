@@ -1,5 +1,27 @@
 # Тестовое задание - Frontend Developer (Travelpayouts)
 
+## Запуск проекта
+
+Склонировать репозиторий командой
+
+```
+git clone <ссылка на репозиторий>
+```
+
+Перейти в папку с проектом и установить зависимости
+
+```
+npm install
+```
+
+Запустить проект
+
+```
+npm start
+```
+
+## Описание задания
+
 ### Цель
 
 Сделать виджет формы, который будет вставляться на сторонние сайты.
@@ -8,7 +30,7 @@
 
 Макет респонсивной формы лежит в этом репозитории `TP_test.sketch`/`TP_test.pdf`/`TP_test.png`.
 
-![Layout preview](/maket_preview.png?raw=true "Layout preview")
+![Layout preview](/maket_preview.png?raw=true 'Layout preview')
 
 ### Задача
 

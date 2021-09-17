@@ -1,0 +1,77 @@
+.SearchForm,
+.SearchForm::after,
+.SearchForm::before,
+.SearchForm *,
+.SearchForm *::after,
+.SearchForm *::before {
+  box-sizing: border-box;
+}
+
+.SearchForm {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.SearchFormHeader {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.SearchFormDescription {
+  width: 25%;
+  margin: 0;
+  padding: 10px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.InputContainer,
+.ButtonContainer {
+  width: 25%;
+  padding: 10px;
+}
+
+.Medium .InputContainer,
+.Medium .ButtonContainer {
+  width: calc(100% / 3);
+}
+
+.Medium .SearchFormDescription {
+  width: 100%;
+}
+
+.Small .InputContainer {
+  width: 50%;
+}
+
+.Small .SearchFormDescription,
+.Small .ButtonContainer {
+  width: 100%;
+}
+
+.Small .SearchFormHeader .ExtraSmall .SearchFormHeader {
+  font-size: 18px;
+}
+
+.ExtraSmall .SearchFormDescription,
+.ExtraSmall .InputContainer,
+.ExtraSmall .ButtonContainer {
+  width: 100%;
+}
+
+.ExtraSmall .SearchFormDescription {
+  order: 1;
+}

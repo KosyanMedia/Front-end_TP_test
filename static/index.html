@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <style>
+      #fullSizeContainer {
+        margin-bottom: 24px;
+      }
+
+      #largeContainer {
+        max-width: 1024px;
+        margin-bottom: 24px;
+      }
+
+      #mediumContainer {
+        max-width: 768px;
+        margin-bottom: 24px;
+      }
+
+      #smallContainer {
+        max-width: 440px;
+        margin-bottom: 24px;
+      }
+
+      #extraSmallContainer {
+        max-width: 286px;
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullSizeContainer"></div>
+    <div id="largeContainer"></div>
+    <div id="mediumContainer"></div>
+    <div id="smallContainer"></div>
+    <div id="extraSmallContainer"></div>
+
+    <script src="./ticketSearchForm.js"></script>
+    <script>
+      window.ticketSearchForm.initSearchForm('fullSizeContainer');
+      window.ticketSearchForm.initSearchForm('largeContainer');
+      window.ticketSearchForm.initSearchForm('mediumContainer', {
+        text: { headerText: 'Какой-то кастомный заголовок формы!' },
+      });
+      window.ticketSearchForm.initSearchForm('smallContainer', {
+        theme: { backgroundColor: '#2a3d45', buttonBgColor: '#62c370' },
+      });
+      window.ticketSearchForm.initSearchForm('extraSmallContainer');
+    </script>
+  </body>
+</html>
