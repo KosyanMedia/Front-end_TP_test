@@ -30,7 +30,7 @@ export function DateInput({
     name,
     type: 'text',
     className: styles.DateInput,
-    style: `background-image: url(${calendarIcon}); backgroundsize: 15px 17px;`,
+    style: `background-image: url(${calendarIcon});`,
     placeholder,
   });
 
