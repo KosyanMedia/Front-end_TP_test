@@ -4,7 +4,7 @@
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
-    "lib": ["esnext", "dom"],
+    "lib": ["es6", "dom"],
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",

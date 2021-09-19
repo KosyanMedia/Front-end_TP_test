@@ -34,6 +34,9 @@ export function DateInput({
     placeholder,
   });
 
+  // workaround for ie
+  departDateInput.style.backgroundImage = `url(${calendarIcon});`;
+
   return createNode('div', { className: styles.DateInputWrapper }, [
     departDatelabel,
     departDateInput,

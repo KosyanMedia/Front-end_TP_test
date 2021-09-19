@@ -7,7 +7,8 @@ interface ButtonProps {
   name: string;
   type: 'submit' | 'reset' | 'button';
   text: string;
-  style: string;
+  backgroundColor: string;
+  color: string;
 }
 
 export function Button({
@@ -15,17 +16,24 @@ export function Button({
   name,
   type,
   text,
-  style,
+  backgroundColor,
+  color,
 }: ButtonProps): HTMLElement {
-  return createNode(
+  const buttonNode = createNode(
     'button',
     {
       id,
       name,
       type,
       className: styles.Button,
-      style,
+      style: `background-color: ${backgroundColor}; color: ${color}`,
     },
     [text],
   );
+
+  // workaround for ie
+  buttonNode.style.backgroundColor = backgroundColor;
+  buttonNode.style.color = color;
+
+  return buttonNode;
 }

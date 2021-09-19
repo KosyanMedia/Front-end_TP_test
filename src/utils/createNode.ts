@@ -1,7 +1,7 @@
 export function createNode(
   tagName: string,
-  attributes?: Record<string, string>,
-  children?: (string | HTMLElement)[],
+  attributes?: Record<string, string | object>,
+  children?: (string | HTMLElement)[]
 ): HTMLElement {
   const node: HTMLElement = document.createElement(tagName);
 

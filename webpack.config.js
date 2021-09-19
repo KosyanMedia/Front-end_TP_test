@@ -52,12 +52,20 @@ module.exports = {
     filename: '[name].js',
     path: path.join(__dirname, 'dist'),
     clean: true,
+    environment: {
+      arrowFunction: false,
+      bigIntLiteral: false,
+      const: false,
+      destructuring: false,
+      dynamicImport: false,
+      forOf: false,
+      module: false,
+    },
   },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    https: true,
     port: 3001,
   },
 };

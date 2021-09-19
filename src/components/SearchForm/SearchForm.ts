@@ -20,6 +20,8 @@ export function SearchForm({
   },
   theme: { backgroundColor, color, buttonBgColor, buttonColor },
 }: SearchFormProps): HTMLElement {
+  console.log(backgroundColor);
+
   const searchFormHeader: HTMLElement = createNode(
     'header',
     { className: styles.SearchFormHeader },
@@ -63,7 +65,8 @@ export function SearchForm({
     name: 'searchButton',
     type: 'submit',
     text: searchButtonText,
-    style: `background-color: ${buttonBgColor}; color: ${buttonColor}`,
+    backgroundColor: buttonBgColor,
+    color: buttonColor,
   });
 
   const searchFormButtonContainer: HTMLElement = createNode(
@@ -72,7 +75,7 @@ export function SearchForm({
     [searchFormButton],
   );
 
-  return createNode(
+  const formNode = createNode(
     'form',
     {
       id: 'searchForm',
@@ -87,6 +90,12 @@ export function SearchForm({
       searchFormButtonContainer,
     ],
   );
+
+  // workaround for ie
+  formNode.style.backgroundColor = backgroundColor;
+  formNode.style.color = color;
+
+  return formNode;
 }
 
 export { styles as searchFormStyles };
